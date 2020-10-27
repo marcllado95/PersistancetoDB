@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi web de empleados</title>
+
+    <!-- BOOTSTRAP IMPORTS  -->
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>-->
+
+
+
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="app.css">
+
+
+
+</head>
+
+<body>
+    <h1>Employee Dashboard</h1>
+    <label for="fid">just for editing --> id</label>
+    <input type="number" id="fid" name="fid"><br><br>
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="fsurname">Surname</label>
+    <input type="text" id="fsurname" name="fsurname"><br><br>
+    <label for="fsalary">Salary</label>
+    <input type="number" id="fsalary" name="fsalary"><br><br>
+    <label for="fjob">Job</label>
+    <input type="text" id="fjob" name="fjob"><br><br>
+
+    <button onclick="addEmployee()">Add employee</button>
+    <button onclick="editEmployee()">Edit</button>
+    <button onclick="getAllEmployee()">Get All employees</button>
+
+  
+    <h3>Employee List</h3>
+    <div>
+
+        <table id="employeeList">
+
+        <thead>
+            <tr>                <!--  tr = row (fila) -->
+                <th>id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Job</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+<!-- dejo esto vacio porque aqui se hace el .append (tbody) en el .js-->
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+
+    <br><br>
+    
+    <h4>Fire Employee... Ciao!</h4>
+    <label for="fireid">id:</label>
+    <input type="number" id="fireid" name="fireid">
+    <button onclick="FireEmployee()">Delete</button>
+
+    <!--<div class="baseMargin">
+        <button type="button" class="btn btn-primary" onclick="getButton()">Show All(GET)</button>
+        <button type="button" class="btn btn-secondary">Edit</button>
+        <button type="button" class="btn btn-success">Add New Employee(POST)</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+    </div>-->
+
+
+
+    <!-- JAVASCRIPT BOOTSTRAP IMPORTS -->
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
