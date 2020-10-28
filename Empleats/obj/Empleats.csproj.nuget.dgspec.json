@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\ASP.NET---Get-Started-\\Empleats\\Empleats.csproj": {}
+    "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\PersistancetoDB\\Empleats\\Empleats.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\ASP.NET---Get-Started-\\Empleats\\Empleats.csproj": {
+    "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\PersistancetoDB\\Empleats\\Empleats.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\ASP.NET---Get-Started-\\Empleats\\Empleats.csproj",
+        "projectUniqueName": "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\PersistancetoDB\\Empleats\\Empleats.csproj",
         "projectName": "Empleats",
-        "projectPath": "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\ASP.NET---Get-Started-\\Empleats\\Empleats.csproj",
+        "projectPath": "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\PersistancetoDB\\Empleats\\Empleats.csproj",
         "packagesPath": "C:\\Users\\Marc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\ASP.NET---Get-Started-\\Empleats\\obj\\",
+        "outputPath": "C:\\Users\\Marc\\Desktop\\copia_proyecto_git\\PersistancetoDB\\Empleats\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -59,6 +59,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

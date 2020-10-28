@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using Empleats.Data;
 
 namespace Empleats
@@ -37,15 +38,15 @@ namespace Empleats
                     });
             });
 
-
             services.AddControllers();
-
-
 
             services.AddRazorPages();
 
+            services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:Default"]));
+
+
             services.AddDbContext<EmpleatsContext>(options =>                   //linia que s'ha creat gràcies al scaffolding
-                    options.UseSqlServer(Configuration.GetConnectionString("EmpleatsContext")));
+                    options.UseMySQL(Configuration.GetConnectionString("Default")));
             //només obrir l'app, el fitxer "EmpleatsContext" es fa un new, s'inicialitza i es guarda en una variable, 
             //que es global i es pot utilitzar a qualsevol lloc
 

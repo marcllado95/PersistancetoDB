@@ -1,0 +1,32 @@
+PERSISTANCE TO DATABASE (with MySQL server)
+
+Es necessari instal·lar al Visual Studio (administrador de paquetes Nugget) per poder fer l'exercici:
+
+*  MySQLConnector 
+*  MySql.Data.EntityFrameworkCore
+
+
+Canvis fets respecte al projecte realitzat amb SQLServer:
+-----------------------------------------------------------------------------------------------------------------------------------
+* al fitxer EmpleatsContext.cs, dins de
+
+public void ConfigureServices(IServiceCollection services)
+        { 
+ 		services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:Default"]
+
+		services.AddDbContext<EmpleatsContext>(options =>                   
+                    options.UseMySQL(Configuration.GetConnectionString("Default")));
+        }
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+* al fitxer apsettings.json, canviar el connection string:
+
+  "ConnectionStrings": {
+
+    "Default": "server=localhost; user=root; password=*******; database=employee_mysql_db"
+  }
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+¡¡¡¡¡¡¡¡¡¡  Al acabar, esborrar els  arxius de Migrations i buidar la DB. A continuació, add-migration Inital i update-database.  !!!!!!!!!!!!!!!!!!!!
